@@ -53,7 +53,7 @@ def display_login():
         if submit_button:
             if hash_string(password) == CORRECT_PASSWORD_HASH:
                 st.session_state.logged_in = True
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.error("Incorrect password. Please try again.")
 
